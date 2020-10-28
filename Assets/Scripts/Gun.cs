@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
+    [SerializeField] private MeshRenderer _gunBody;
     private Animator _animator;
     
     private const string IsMovingStr = "Move";
@@ -14,6 +15,8 @@ public class Gun : MonoBehaviour
     
     private bool _isMoving;
     private bool _isShooting;
+
+    public MeshRenderer GunBody => _gunBody;
 
     private void Start()
     {
